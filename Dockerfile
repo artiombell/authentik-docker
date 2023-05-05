@@ -1,0 +1,1 @@
+FROM --platform= artiombell/authentik:1.0.0 
