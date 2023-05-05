@@ -1,1 +1,1 @@
-FROM --platform= artiombell/authentik:1.0.0 
+FROM --platform=linux/amd64 beryju/authentik:2023.4.1
