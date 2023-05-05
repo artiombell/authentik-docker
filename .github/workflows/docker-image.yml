@@ -13,11 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
-        name: Checkout files
-        run: |
-          echo Checking out local story
-          git clone https://github.com/tenanthq/authentik.git
-          cd authentik
+
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -33,6 +29,11 @@ jobs:
       -
         name: Build and push
         uses: docker/build-push-action@v4
+        run:
+          echo Checking out local story
+          git clone https://github.com/tenanthq/authentik.git
+          cd authentik
         with:
           push: true
           tags: artiombell/authentik:1.0.0
+
